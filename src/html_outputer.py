@@ -1,4 +1,4 @@
-
+import os
 
 class HtmlOutputer() :
     def __init__(self) :
@@ -10,6 +10,10 @@ class HtmlOutputer() :
         self.data.append(data)
 
     def output_html(self, file_name) :
+        dir_path = os.path.dirname(file_name)
+        if len(dir_path) != 0 :
+            os.makedirs(dir_path)
+
         f = open(file_name, 'w')
 
         f.write('<html>')

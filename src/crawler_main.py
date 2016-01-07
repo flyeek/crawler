@@ -30,9 +30,10 @@ class CrawlerMain() :
                 if data_count >= result_max_count :
                     break
             except Exception, e:
+                print e
                 failed_url_count += 1
 
-        self.html_outputer.output_html('crawle_result.html')
+        self.html_outputer.output_html('./output/crawle_result.html')
         print 'fail count = %d' % (failed_url_count)
         print 'success count = %d' % (data_count)
 
