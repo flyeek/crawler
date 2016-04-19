@@ -1,12 +1,12 @@
 import os
 
 
-class HtmlOutputer():
+class HtmlOutputer:
     def __init__(self):
         self.data = []
 
     def collect_data(self, data):
-        if data == None:
+        if data is None:
             return
         self.data.append(data)
 
